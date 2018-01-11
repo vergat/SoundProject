@@ -38,15 +38,14 @@ void Wrapper::Load(const char *path,bool stream)
 		m_result = m_system->createSound(path, FMOD_DEFAULT, 0, &m_sound);
 		ErrorCheck(m_result);
 	}
-	m_result = m_system->playSound(m_sound, 0, false, &m_channel);
-	ErrorCheck(m_result);
+
 }
 
 void Wrapper::Play()
 {
 	if (m_firstTime)
 	{
-		m_result = m_channel->setPaused(false);
+		m_result = m_system->playSound(m_sound, 0, false, &m_channel);
 		ErrorCheck(m_result);
 		m_firstTime = false;
 	}

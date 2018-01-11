@@ -39,6 +39,7 @@ int main()
 		std::cout << "Select one of these possible actions by write their number: " << std::endl;
 		std::cout << "1. Play" << std::endl;
 		std::cout << "2. Pause" << std::endl;
+		std::cout << "3. Stop" << std::endl;
 		std::cout << "4. Volume" << std::endl;
 		std::cout << "5. Pan" << std::endl;
 		std::cout << "6. Exit" << std::endl;
@@ -50,6 +51,9 @@ int main()
 			break;
 		case 2:
 			wrapper.Pause();
+			break;
+		case 3:
+			wrapper.Stop();
 			break;
 		case 4:
 		{
